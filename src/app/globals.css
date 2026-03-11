@@ -36,34 +36,34 @@
 }
 
 :root {
-  /* Light Theme Colors */
-  --background: #F7FAFF;
-  --foreground: #0C1330;
+  /* Light Theme Colors - Sharper, Cooler Vibe */
+  --background: #FFFFFF;
+  --foreground: #090E17;
   
-  --card: #FFFFFF;
-  --card-foreground: #0C1330;
+  --card: #F8FAFC;
+  --card-foreground: #090E17;
   
   --popover: #FFFFFF;
-  --popover-foreground: #0C1330;
+  --popover-foreground: #090E17;
   
-  --primary: #2F5BFF;
+  --primary: #0EA5E9; /* Sky 500 */
   --primary-foreground: #FFFFFF;
   
-  --secondary: #EDF4FF;
-  --secondary-foreground: #4A5578;
+  --secondary: #F1F5F9; /* Slate 100 */
+  --secondary-foreground: #334155; /* Slate 700 */
   
-  --muted: #EDF4FF;
-  --muted-foreground: #4A5578;
+  --muted: #F1F5F9;
+  --muted-foreground: #64748B; /* Slate 500 */
   
-  --accent: #DDEBFF;
-  --accent-foreground: #2F5BFF;
+  --accent: #E0F2FE; /* Sky 100 */
+  --accent-foreground: #0369A1; /* Sky 700 */
   
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   
-  --border: #D9E7FF;
-  --input: #D9E7FF;
-  --ring: #2F5BFF;
+  --border: #E2E8F0; /* Slate 200 */
+  --input: #E2E8F0;
+  --ring: #0EA5E9;
   
   --radius: 1rem;
 }
