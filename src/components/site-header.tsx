@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { ShieldAlert } from "lucide-react"
+import Image from "next/image"
 import { MainNav } from "@/components/main-nav"
 import { MobileNav } from "@/components/mobile-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
@@ -32,13 +32,15 @@ export function SiteHeader() {
       <div className="container mx-auto px-4 md:px-8 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <MobileNav />
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="bg-primary/10 p-2 rounded-xl group-hover:bg-primary/20 transition-colors">
-              <ShieldAlert className="h-6 w-6 text-primary" />
-            </div>
-            <span className="font-heading font-bold text-xl tracking-tight hidden sm:inline-block">
-              ASHAL TECH
-            </span>
+          <Link href="/" className="flex items-center group">
+            <Image 
+              src="/images/logo.png" 
+              alt="ASHAL TECH Logo" 
+              width={180} 
+              height={60} 
+              className="object-contain h-10 w-auto md:h-12 drop-shadow-md"
+              priority
+            />
           </Link>
         </div>
 

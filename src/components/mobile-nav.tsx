@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Menu, ShieldAlert, ChevronRight, Home, Info, Briefcase, Lightbulb, GraduationCap, MessageSquare, Phone } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 
+import Image from "next/image"
+
 import { Button, buttonVariants } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import {
@@ -34,13 +36,14 @@ export function MobileNav() {
       
       <SheetContent side="left" className="w-[320px] sm:w-[400px] bg-[#0b0e14] border-r border-[#1a2235] p-0 flex flex-col">
         {/* Header / Brand */}
-        <div className="p-6 border-b border-[#1a2235] flex items-center gap-3">
-          <div className="bg-sky-500/10 p-2.5 rounded-xl shadow-[0_0_15px_rgba(14,165,233,0.3)]">
-            <ShieldAlert className="h-6 w-6 text-sky-400" />
-          </div>
-          <span className="font-heading font-bold text-2xl tracking-tight text-white">
-            ASHAL TECH
-          </span>
+        <div className="p-6 border-b border-[#1a2235] flex justify-center">
+          <Image 
+            src="/images/logo.png" 
+            alt="ASHAL TECH Logo" 
+            width={180} 
+            height={60} 
+            className="object-contain h-12 w-auto"
+          />
         </div>
 
         {/* Scrollable Navigation */}
