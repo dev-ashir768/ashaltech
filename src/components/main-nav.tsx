@@ -11,6 +11,7 @@ export function MainNav({ className }: React.HTMLAttributes<HTMLElement>) {
       <Link href="/#solutions" className="transition-colors hover:text-primary text-muted-foreground">Solutions</Link>
       <Link href="/#trainings" className="transition-colors hover:text-primary text-muted-foreground">Trainings</Link>
       <Link href="/#message" className="transition-colors hover:text-primary text-muted-foreground">Message from CEO</Link>
+      <Link href="/contact" className="transition-colors hover:text-primary text-muted-foreground">Contact</Link>
     </nav>
   )
 }
