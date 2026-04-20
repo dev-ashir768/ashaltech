@@ -19,7 +19,7 @@ const navLinks = [
   { href: "/", label: "Home", icon: Home },
   { href: "/#about", label: "About", icon: Info },
   { href: "/#services", label: "Services", icon: Briefcase },
-  { href: "/#solutions", label: "Solutions", icon: Lightbulb },
+  { href: "/solutions", label: "Solutions", icon: Lightbulb },
   { href: "/#trainings", label: "Trainings", icon: GraduationCap },
   { href: "/#message", label: "Message from CEO", icon: MessageSquare },
 ]
@@ -75,7 +75,7 @@ export function MobileNav() {
 
         {/* Footer CTA */}
         <div className="p-6 border-t border-[#1a2235] bg-[#0b0e14]/50 backdrop-blur-lg">
-          <Link href="/#contact" onClick={() => setOpen(false)} className="block w-full">
+          <Link href="/contact" onClick={() => setOpen(false)} className="block w-full">
             <Button size="lg" className="w-full rounded-full bg-linear-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-[0_4px_20px_rgba(14,165,233,0.3)] border-0 py-6 h-auto text-lg">
               <Phone className="w-5 h-5 mr-2" />
               Contact Us Now

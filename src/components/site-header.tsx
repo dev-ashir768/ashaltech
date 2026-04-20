@@ -49,7 +49,7 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <ThemeToggle />
           <div className="hidden md:block">
-            <Link href="/#contact">
+            <Link href="/contact">
               <Button variant="primary-glow" className="rounded-full">
                 Contact Us
               </Button>
