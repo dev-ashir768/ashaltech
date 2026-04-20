@@ -2,8 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
-import { Menu, ShieldAlert, ChevronRight, Home, Info, Briefcase, Lightbulb, GraduationCap, MessageSquare, Phone } from "lucide-react"
-import { motion, AnimatePresence } from "framer-motion"
+import { Menu, ChevronRight, Home, Info, Briefcase, Lightbulb, GraduationCap, MessageSquare, Phone } from "lucide-react"
 
 import Image from "next/image"
 
@@ -34,7 +33,7 @@ export function MobileNav() {
         <span className="sr-only">Toggle menu</span>
       </SheetTrigger>
       
-      <SheetContent side="left" className="w-[320px] sm:w-[400px] bg-[#0b0e14] border-r border-[#1a2235] p-0 flex flex-col">
+      <SheetContent side="left" className="w-[320px] sm:w-100 bg-[#0b0e14] border-r border-[#1a2235] p-0 flex flex-col">
         {/* Header / Brand */}
         <div className="p-6 border-b border-[#1a2235] flex justify-center">
           <Image 
@@ -49,7 +48,7 @@ export function MobileNav() {
         {/* Scrollable Navigation */}
         <div className="flex-1 overflow-y-auto py-6 px-4">
           <nav className="flex flex-col gap-2">
-            {navLinks.map((link, idx) => {
+            {navLinks.map((link) => {
               const Icon = link.icon
               return (
                 <Link 
