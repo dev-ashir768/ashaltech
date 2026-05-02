@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { motion } from "framer-motion"
+import * as React from "react";
+import { motion } from "framer-motion";
 import {
   Mail,
   Phone,
@@ -13,9 +13,9 @@ import {
   ShieldCheck,
   Clock,
   MessageSquare,
-} from "lucide-react"
-import { cn } from "@/lib/utils"
-import ReCAPTCHA from "react-google-recaptcha"
+} from "lucide-react";
+import { cn } from "@/lib/utils";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const offices = [
   {
@@ -40,7 +40,7 @@ const offices = [
     border: "border-emerald-500/20",
     icon: "text-emerald-400",
   },
-]
+];
 
 const highlights = [
   {
@@ -64,7 +64,7 @@ const highlights = [
     color: "text-emerald-400",
     bg: "bg-emerald-500/10",
   },
-]
+];
 
 export function ContactContent() {
   const [form, setForm] = React.useState({
@@ -73,22 +73,26 @@ export function ContactContent() {
     phone: "",
     subject: "",
     message: "",
-  })
-  const [submitted, setSubmitted] = React.useState(false)
-  const [recaptchaToken, setRecaptchaToken] = React.useState<string | null>(null)
-  const recaptchaRef = React.useRef<ReCAPTCHA>(null)
+  });
+  const [submitted, setSubmitted] = React.useState(false);
+  const [recaptchaToken, setRecaptchaToken] = React.useState<string | null>(
+    null,
+  );
+  const recaptchaRef = React.useRef<ReCAPTCHA>(null);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
-    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }))
-  }
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (!recaptchaToken) return
-    setSubmitted(true)
-  }
+    e.preventDefault();
+    if (!recaptchaToken) return;
+    setSubmitted(true);
+  };
 
   return (
     <>
@@ -116,8 +120,9 @@ export function ContactContent() {
               <span className="text-gradient">Secure Together</span>
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Have a project in mind or need a consultation? Our security experts are ready to
-              help you protect and future-proof your business.
+              Have a project in mind or need a consultation? Our security
+              experts are ready to help you protect and future-proof your
+              business.
             </p>
           </motion.div>
         </div>
@@ -162,7 +167,8 @@ export function ContactContent() {
               <div className="rounded-2xl border border-border bg-card/60 backdrop-blur-sm p-6 md:p-10 shadow-xl">
                 <h2 className="text-2xl font-bold mb-2">Send Us a Message</h2>
                 <p className="text-muted-foreground text-sm mb-8">
-                  Fill in the form below and we&apos;ll get back to you as soon as possible.
+                  Fill in the form below and we&apos;ll get back to you as soon
+                  as possible.
                 </p>
 
                 {submitted ? (
@@ -176,21 +182,21 @@ export function ContactContent() {
                     </div>
                     <h3 className="text-xl font-bold">Message Received!</h3>
                     <p className="text-muted-foreground text-sm max-w-sm mx-auto">
-                      Thank you for reaching out. Our team will get back to you within 24
-                      hours.
+                      Thank you for reaching out. Our team will get back to you
+                      within 24 hours.
                     </p>
                     <button
                       onClick={() => {
-                        setSubmitted(false)
-                        setRecaptchaToken(null)
-                        recaptchaRef.current?.reset()
+                        setSubmitted(false);
+                        setRecaptchaToken(null);
+                        recaptchaRef.current?.reset();
                         setForm({
                           name: "",
                           email: "",
                           phone: "",
                           subject: "",
                           message: "",
-                        })
+                        });
                       }}
                       className="text-primary text-sm underline underline-offset-4 hover:text-primary/80"
                     >
@@ -217,7 +223,8 @@ export function ContactContent() {
                       </div>
                       <div className="space-y-1.5">
                         <label className="text-sm font-medium" htmlFor="email">
-                          Email Address <span className="text-destructive">*</span>
+                          Email Address{" "}
+                          <span className="text-destructive">*</span>
                         </label>
                         <input
                           id="email"
@@ -248,7 +255,10 @@ export function ContactContent() {
                         />
                       </div>
                       <div className="space-y-1.5">
-                        <label className="text-sm font-medium" htmlFor="subject">
+                        <label
+                          className="text-sm font-medium"
+                          htmlFor="subject"
+                        >
                           Subject <span className="text-destructive">*</span>
                         </label>
                         <select
@@ -262,10 +272,18 @@ export function ContactContent() {
                           <option value="" disabled>
                             Select a topic
                           </option>
-                          <option value="security">IT Security Solutions</option>
-                          <option value="infrastructure">IT Infrastructure</option>
-                          <option value="healthcare">Healthcare Solutions</option>
-                          <option value="training">Trainings & Certifications</option>
+                          <option value="security">
+                            IT Security Solutions
+                          </option>
+                          <option value="infrastructure">
+                            IT Infrastructure
+                          </option>
+                          <option value="healthcare">
+                            Healthcare Solutions
+                          </option>
+                          <option value="training">
+                            Trainings & Certifications
+                          </option>
                           <option value="general">General Inquiry</option>
                         </select>
                       </div>
@@ -291,7 +309,10 @@ export function ContactContent() {
                     <div className="flex justify-center">
                       <ReCAPTCHA
                         ref={recaptchaRef}
-                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
+                        sitekey={
+                          process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ??
+                          "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                        }
                         theme="dark"
                         onChange={(token) => setRecaptchaToken(token)}
                         onExpired={() => setRecaptchaToken(null)}
@@ -324,21 +345,27 @@ export function ContactContent() {
                   className={cn(
                     "rounded-2xl border p-6 bg-gradient-to-br",
                     office.border,
-                    office.color
+                    office.color,
                   )}
                 >
                   <div className="flex items-center gap-3 mb-5">
                     <span className="text-2xl">{office.flag}</span>
                     <div>
                       <div className="font-bold text-sm">{office.country}</div>
-                      <div className="text-xs text-muted-foreground">{office.city}</div>
+                      <div className="text-xs text-muted-foreground">
+                        {office.city}
+                      </div>
                     </div>
                   </div>
 
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
-                      <MapPin className={cn("w-4 h-4 mt-0.5 shrink-0", office.icon)} />
-                      <span className="text-sm text-muted-foreground">{office.address}</span>
+                      <MapPin
+                        className={cn("w-4 h-4 mt-0.5 shrink-0", office.icon)}
+                      />
+                      <span className="text-sm text-muted-foreground">
+                        {office.address}
+                      </span>
                     </div>
                     <div className="flex items-center gap-3">
                       <Phone className={cn("w-4 h-4 shrink-0", office.icon)} />
@@ -387,8 +414,8 @@ export function ContactContent() {
               <div className="rounded-2xl border border-primary/20 bg-primary/5 p-6 flex gap-4">
                 <ShieldCheck className="w-5 h-5 text-primary shrink-0 mt-0.5" />
                 <p className="text-sm text-muted-foreground">
-                  All communications are encrypted and confidential. Your data is never shared
-                  with third parties.
+                  All communications are encrypted and confidential. Your data
+                  is never shared with third parties.
                 </p>
               </div>
             </motion.div>
@@ -396,5 +423,5 @@ export function ContactContent() {
         </div>
       </section>
     </>
-  )
+  );
 }
