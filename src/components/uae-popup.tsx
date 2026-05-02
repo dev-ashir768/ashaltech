@@ -29,7 +29,7 @@ export function UaePopup() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.25 }}
-          className="fixed inset-0 z-[9999] flex items-center justify-center p-4"
+          className="fixed inset-0 z-9999 flex items-center justify-center p-4"
           style={{ background: "rgba(0,0,0,0.65)", backdropFilter: "blur(4px)" }}
           onClick={close}
         >
@@ -39,7 +39,7 @@ export function UaePopup() {
             exit={{ opacity: 0, scale: 0.92, y: 16 }}
             transition={{ type: "spring", bounce: 0.3, duration: 0.5 }}
             onClick={(e) => e.stopPropagation()}
-            className="relative w-full max-w-md rounded-3xl overflow-hidden shadow-2xl bg-white"
+            className="relative w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl bg-white"
           >
             {/* Close button */}
             <button
