@@ -2,6 +2,7 @@
 
 import * as React from "react"
 import Link from "next/link"
+import { usePathname } from "next/navigation"
 import { Menu, ChevronRight, Home, Info, Briefcase, Lightbulb, GraduationCap, MessageSquare, Phone } from "lucide-react"
 
 import Image from "next/image"
@@ -25,6 +26,10 @@ const navLinks = [
 
 export function MobileNav() {
   const [open, setOpen] = React.useState(false)
+  const pathname = usePathname()
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href)
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -50,22 +55,39 @@ export function MobileNav() {
           <nav className="flex flex-col gap-2">
             {navLinks.map((link) => {
               const Icon = link.icon
+              const active = isActive(link.href)
               return (
-                <Link 
-                  key={link.href} 
-                  href={link.href} 
-                  onClick={() => setOpen(false)} 
-                  className="group flex items-center justify-between p-4 rounded-2xl hover:bg-[#151b2b] transition-all duration-300"
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className={cn(
+                    "group flex items-center justify-between p-4 rounded-2xl transition-all duration-300",
+                    active ? "bg-sky-500/10 border border-sky-500/30" : "hover:bg-[#151b2b] border border-transparent"
+                  )}
                 >
                   <div className="flex items-center gap-4">
-                    <div className="bg-[#1a2235] p-2.5 rounded-xl group-hover:bg-sky-500 group-hover:text-white text-gray-400 transition-colors duration-300">
+                    <div className={cn(
+                      "p-2.5 rounded-xl transition-colors duration-300",
+                      active
+                        ? "bg-sky-500 text-white"
+                        : "bg-[#1a2235] text-gray-400 group-hover:bg-sky-500 group-hover:text-white"
+                    )}>
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className="text-lg font-medium text-gray-300 group-hover:text-white transition-colors duration-300">
+                    <span className={cn(
+                      "text-lg font-medium transition-colors duration-300",
+                      active ? "text-sky-400 font-semibold" : "text-gray-300 group-hover:text-white"
+                    )}>
                       {link.label}
                     </span>
                   </div>
-                  <ChevronRight className="w-5 h-5 text-gray-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300" />
+                  <ChevronRight className={cn(
+                    "w-5 h-5 transition-all duration-300",
+                    active
+                      ? "opacity-100 translate-x-0 text-sky-400"
+                      : "text-gray-500 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0"
+                  )} />
                 </Link>
               )
             })}
