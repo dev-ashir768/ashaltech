@@ -42,6 +42,9 @@ export function SiteFooter() {
               <Link href="#" className="h-10 w-10 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/20 hover:text-primary transition-colors text-muted-foreground">
                 <Facebook className="h-4 w-4" />
               </Link>
+              <Link href="#" className="h-10 w-10 flex items-center justify-center rounded-full bg-secondary hover:bg-primary/20 hover:text-primary transition-colors text-muted-foreground">
+                <Instagram className="h-4 w-4" />
+              </Link>
             </div>
           </div>
 
@@ -49,11 +52,13 @@ export function SiteFooter() {
           <div className="space-y-6">
             <h3 className="font-heading font-semibold text-lg">Services</h3>
             <ul className="space-y-3">
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">ISO Consultancy</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">VA & Pen Test</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Open Source Consultancy</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">GRC Consultancy</Link></li>
-              <li><Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Trainings & Certifications</Link></li>
+              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Networking</Link></li>
+              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Managed Services</Link></li>
+              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">VA &amp; PEN Testing</Link></li>
+              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">GRC Consultancy</Link></li>
+              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Compliance &amp; Audit</Link></li>
+              <li><Link href="/services" className="text-sm text-muted-foreground hover:text-primary transition-colors">Virtual CISO</Link></li>
+              <li><Link href="/trainings" className="text-sm text-muted-foreground hover:text-primary transition-colors">Trainings &amp; Certifications</Link></li>
             </ul>
           </div>
 
@@ -105,8 +110,8 @@ export function SiteFooter() {
             &copy; {new Date().getFullYear()} ASHAL TECH. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms of Service</Link>
+            <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary transition-colors">Terms &amp; Conditions</Link>
           </div>
         </div>
       </div>
