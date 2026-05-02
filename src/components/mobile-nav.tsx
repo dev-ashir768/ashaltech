@@ -20,7 +20,7 @@ const navLinks = [
   { href: "/services", label: "Services", icon: Briefcase },
   { href: "/solutions", label: "Solutions", icon: Lightbulb },
   { href: "/trainings", label: "Trainings", icon: GraduationCap },
-  { href: "/#message", label: "Message from CEO", icon: MessageSquare },
+  { href: "/ceo-message", label: "Message from CEO", icon: MessageSquare },
 ]
 
 export function MobileNav() {
