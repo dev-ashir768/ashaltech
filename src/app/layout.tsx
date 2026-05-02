@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Sora, Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { UaePopup } from "@/components/uae-popup";
+import { SecurityProvider } from "@/components/security-provider";
 
 const sora = Sora({
   subsets: ["latin"],
@@ -34,6 +36,8 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SecurityProvider />
+          <UaePopup />
           {children}
         </ThemeProvider>
       </body>

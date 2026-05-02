@@ -105,6 +105,12 @@
   }
   * {
     @apply border-border outline-ring/50;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  input, textarea, [contenteditable] {
+    user-select: text;
+    -webkit-user-select: text;
   }
   body {
     @apply bg-background text-foreground transition-colors duration-500 min-h-screen;
@@ -112,6 +118,10 @@
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading tracking-tight;
+  }
+  a, button, [role="button"], select, label[for],
+  [type="submit"], [type="button"], [type="reset"] {
+    cursor: pointer;
   }
 }
 

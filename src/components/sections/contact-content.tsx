@@ -395,6 +395,28 @@ export function ContactContent() {
           </div>
         </div>
       </section>
+
+      {/* Map Section */}
+      <section className="pb-16 md:pb-24">
+        <div className="container mx-auto px-4 md:px-8">
+          <div className="mb-6">
+            <h2 className="text-2xl font-bold mb-1">Find Us</h2>
+            <p className="text-muted-foreground text-sm">Dubai Silicon Oasis, Dubai, UAE</p>
+          </div>
+          <div className="rounded-2xl overflow-hidden border border-border shadow-xl">
+            <iframe
+              title="ASHAL TECH Office Location"
+              src="https://maps.google.com/maps?q=Dubai+Silicon+Oasis,+Dubai,+UAE&output=embed&z=14"
+              width="100%"
+              height="400"
+              style={{ border: 0, display: "block" }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+      </section>
     </>
   )
 }
