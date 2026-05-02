@@ -15,6 +15,7 @@ import {
   MessageSquare,
 } from "lucide-react"
 import { cn } from "@/lib/utils"
+import ReCAPTCHA from "react-google-recaptcha"
 
 const offices = [
   {
@@ -74,6 +75,8 @@ export function ContactContent() {
     message: "",
   })
   const [submitted, setSubmitted] = React.useState(false)
+  const [recaptchaToken, setRecaptchaToken] = React.useState<string | null>(null)
+  const recaptchaRef = React.useRef<ReCAPTCHA>(null)
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -83,6 +86,7 @@ export function ContactContent() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    if (!recaptchaToken) return
     setSubmitted(true)
   }
 
@@ -178,6 +182,8 @@ export function ContactContent() {
                     <button
                       onClick={() => {
                         setSubmitted(false)
+                        setRecaptchaToken(null)
+                        recaptchaRef.current?.reset()
                         setForm({
                           name: "",
                           email: "",
@@ -281,9 +287,21 @@ export function ContactContent() {
                       />
                     </div>
 
+                    {/* Google reCAPTCHA */}
+                    <div className="flex justify-center">
+                      <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ?? "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"}
+                        theme="dark"
+                        onChange={(token) => setRecaptchaToken(token)}
+                        onExpired={() => setRecaptchaToken(null)}
+                      />
+                    </div>
+
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center gap-2 h-12 rounded-xl bg-primary-gradient text-[#070B2B] font-bold text-sm hover:-translate-y-0.5 transition-all glow-cyan shadow-[0_0_20px_rgba(83,200,255,0.4)]"
+                      disabled={!recaptchaToken}
+                      className="w-full flex items-center justify-center gap-2 h-12 rounded-xl bg-primary-gradient text-[#070B2B] font-bold text-sm hover:-translate-y-0.5 transition-all glow-cyan shadow-[0_0_20px_rgba(83,200,255,0.4)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                     >
                       <Send className="w-4 h-4" />
                       Send Message
