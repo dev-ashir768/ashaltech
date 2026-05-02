@@ -33,7 +33,7 @@ const features = [
 
 export function AboutSection() {
   return (
-    <Section id="about" className="bg-secondary/30 relative">
+    <Section id="about" className="bg-[#0b0e14] relative">
       <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay pointer-events-none" />
       
       <div className="text-center max-w-3xl mx-auto mb-16 space-y-6">

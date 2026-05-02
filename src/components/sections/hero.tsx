@@ -37,13 +37,13 @@ export function HeroSection() {
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
-          <Link href="/#services">
+          <Link href="/services">
             <Button variant="primary-glow" size="xl" className="w-full sm:w-auto group">
               Explore Our Services
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>
-          <Link href="/#contact">
+          <Link href="/contact">
             <Button variant="secondary-glow" size="xl" className="w-full sm:w-auto">
               Consult With Us
             </Button>
