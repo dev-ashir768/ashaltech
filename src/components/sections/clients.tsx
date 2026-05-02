@@ -16,7 +16,7 @@ const clients = [
 
 export function ClientsSection() {
   return (
-    <Section className="py-24 bg-background border-y border-border">
+    <Section className="py-14 bg-background/95 border-y border-border">
       <div className="text-center mb-12">
         <h3 className="text-xl md:text-2xl font-bold text-muted-foreground font-heading uppercase tracking-widest">
           Our Esteemed Clients

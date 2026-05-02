@@ -9,7 +9,7 @@ import Link from "next/link"
 
 export function CtaSection() {
   return (
-    <Section className="bg-secondary/10">
+    <Section className="bg-[#0b0e14]">
       <div className="grid lg:grid-cols-2 gap-8">
         
         {/* Left Card - Quote & CTA */}
@@ -36,7 +36,7 @@ export function CtaSection() {
             </div>
             
             <div className="pt-4">
-              <Link href="/#contact">
+              <Link href="/contact">
                 <Button variant="primary-glow" size="xl" className="group">
                   Contact Us Today
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -74,7 +74,7 @@ export function CtaSection() {
             </div>
 
             <div className="pt-4">
-              <Link href="/#trainings">
+              <Link href="/trainings">
                 <Button variant="secondary-glow" size="xl" className="group">
                   Learn More About Trainings
                   <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />

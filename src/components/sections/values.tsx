@@ -31,7 +31,7 @@ const values = [
 
 export function CoreValuesSection() {
   return (
-    <Section id="values" className="bg-background">
+    <Section id="values" className="bg-background/95">
       <div className="text-center mb-16">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}

@@ -9,7 +9,7 @@ import Image from "next/image"
 
 export function OpenSocSection() {
   return (
-    <Section id="opensoc" className="pb-24">
+    <Section id="opensoc" className="bg-background/95 pb-24">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
