@@ -11,7 +11,7 @@ export const Section = React.forwardRef<HTMLElement, SectionProps>(
     return (
       <section
         ref={ref}
-        className={cn("py-20 md:py-32 relative overflow-hidden", className)}
+        className={cn("py-14 md:py-20 relative overflow-hidden", className)}
         {...props}
       >
         {container ? (
