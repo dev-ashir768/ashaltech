@@ -16,7 +16,7 @@ import {
 
 const navLinks = [
   { href: "/", label: "Home", icon: Home },
-  { href: "/#about", label: "About", icon: Info },
+  { href: "/about", label: "About", icon: Info },
   { href: "/services", label: "Services", icon: Briefcase },
   { href: "/solutions", label: "Solutions", icon: Lightbulb },
   { href: "/trainings", label: "Trainings", icon: GraduationCap },
