@@ -3,6 +3,7 @@
 import * as React from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
+import Image from "next/image"
 
 
 export function UaePopup() {
@@ -53,9 +54,12 @@ export function UaePopup() {
 
             {/* Notification Banner Image */}
             <div className="relative w-full h-full overflow-hidden flex items-center justify-center">
-              <img
+              <Image
                 src="/images/notification-banner.jpeg"
                 alt="Notification Banner"
+                width={1122}
+                height={1402}
+                priority
                 className="max-w-full max-h-[85vh] w-auto h-auto object-contain block select-none"
                 draggable={false}
               />

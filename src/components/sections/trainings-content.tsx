@@ -141,7 +141,7 @@ export function TrainingsContent() {
               <br className="hidden md:block" /> Culture
             </h1>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              ASHAL TECH's training programs empower your workforce with the knowledge and
+              ASHAL TECH&apos;s training programs empower your workforce with the knowledge and
               skills to defend against modern cyber threats — from awareness to certification.
             </p>
           </motion.div>

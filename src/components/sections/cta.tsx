@@ -27,8 +27,8 @@ export function CtaSection() {
             <div>
               <Quote className="w-12 h-12 text-primary/30 mb-6" />
               <h3 className="text-2xl md:text-4xl font-bold font-heading leading-tight mb-4">
-                "Cybersecurity isn't just an IT expense. <br />
-                <span className="text-gradient">It's a business investment.</span>"
+                &ldquo;Cybersecurity isn&apos;t just an IT expense. <br />
+                <span className="text-gradient">It&apos;s a business investment.</span>&rdquo;
               </h3>
               <p className="text-muted-foreground text-lg">
                 Protect your intellectual property, safeguard customer trust, and ensure operational continuity with our top-tier defense programs.
@@ -67,7 +67,7 @@ export function CtaSection() {
               </h3>
               
               <p className="text-muted-foreground text-lg leading-relaxed">
-                Elevate your team's capability with rigorous security training. We provide specialized, globally recognized certifications including 
+                Elevate your team&apos;s capability with rigorous security training. We provide specialized, globally recognized certifications including 
                 <span className="font-semibold text-foreground"> Mile2 </span>
                 to ensure your personnel are your strongest defense.
               </p>

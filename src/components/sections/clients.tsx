@@ -1,7 +1,6 @@
 "use client"
 
 import * as React from "react"
-import { motion } from "framer-motion"
 import { Section } from "@/components/section"
 
 // Placeholder logo data - in real app would use next/image

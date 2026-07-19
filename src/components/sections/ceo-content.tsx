@@ -187,8 +187,8 @@ export function CeoContent() {
               >
                 <Quote className="w-8 h-8 text-primary/30 mb-3" />
                 <p className="italic text-muted-foreground leading-relaxed">
-                  "Get Our State-Of-The-Art Security Solutions And Take Your Business To The
-                  New Heights Of Success Without Any Security Threats & Breaches."
+                  &ldquo;Get Our State-Of-The-Art Security Solutions And Take Your Business To The
+                  New Heights Of Success Without Any Security Threats &amp; Breaches.&rdquo;
                 </p>
                 <div className="absolute bottom-0 right-0 w-24 h-24 rounded-2xl bg-primary/5 -z-10" />
               </motion.div>
